@@ -1,0 +1,87 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.nx": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/node_modules": true,
+        "**/Thumbs.db": true
+    },
+    // #region Markdown
+    "[markdown]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.markdown-language-features",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.wordWrap": "on",
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "cSpell.fixSpellingWithRenameProvider": true,
+        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+        "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
+    },
+    "markdown.math.enabled": true,
+    // #endregion Markdown
+    // #region JSON/JSONC
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // #endregion JSON/JSONC
+    // #region TOML
+    "[toml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        }
+    },
+    "evenBetterToml.formatter.alignEntries": true,
+    "evenBetterToml.formatter.alignComments": true,
+    "evenBetterToml.formatter.allowedBlankLines": 2,
+    // #endregion TOML
+    // #region Python
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "python.defaultInterpreterPath": "/usr/local/python/current/bin/python",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    },
+    "ruff.path": [
+        "/usr/local/python/current/bin/ruff"
+    ],
+    "ruff.interpreter": [
+        "/usr/local/python/current/bin/python"
+    ]
+    // #endregion Python
+}

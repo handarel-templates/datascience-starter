@@ -1,0 +1,44 @@
+{
+    "name": "Datascience-Starter",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "runArgs": [
+        "--name=datascience-starter"
+    ],
+    "containerEnv": {
+        "TZ": "Europe/Berlin"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python": {
+            "version": "3.12"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true,
+            "username": "vscode",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        },
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+            "plugins": "zsh-autopair zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/zsh-users/zsh-history-substring-search https://github.com/hlissner/zsh-autopair",
+            "username": "vscode"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "streetsidesoftware.code-spell-checker",
+                "streetsidesoftware.code-spell-checker-german",
+                "tamasfe.even-better-toml",
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "charliermarsh.ruff"
+            ]
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/scripts/postCreateCommand.sh",
+    "postAttachCommand": "bash .devcontainer/scripts/postAttachCommand.sh"
+}
